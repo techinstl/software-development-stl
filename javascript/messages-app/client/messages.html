@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body class="p-10 bg-white">
+    <div class="flex flex-col items-start space-y-4">
+      <h1 class="text-6xl italic">Chat Log</h1>
+      <div
+        class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-blue-200 text-blue-700 rounded-full"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-4 w-4"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          />
+        </svg>
+        Chats Are Below...
+      </div>
+      <button class="border-2 p-4" id="messages-button">Show Messages...</button>
+
+      <div id="messages-output" class="flex flex-col items-center"></div>
+    </div>
+  </body>
+
+  <script src="js/messages.js"></script>
+</html>

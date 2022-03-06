@@ -1,0 +1,7 @@
+{
+  "todos": [
+    { "content": "Take out the trash", "id": 1 },
+    { "content": "Take out the dishes", "id":2 }
+  ]
+}
+

@@ -1,0 +1,17 @@
+.title {
+    color: blue;
+}
+
+.title-2 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.btn {
+    color: black;
+    background-color: white;
+}
+
+#content {
+    background: black;
+    color: white;
+}
