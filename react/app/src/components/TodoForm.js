@@ -11,7 +11,7 @@ export const TodoForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setTodos(data => [...data, todo]);
+    setTodos((data) => [...data, todo]);
   };
 
   return (
@@ -32,7 +32,11 @@ export const TodoForm = () => {
       </form>
       <ul className="flex flex-col space-y-2 p-1">
         {todos.map((element) => (
-          <li>{element}</li>
+          <li className="flex items-center space-x-2">
+            <div className="items-center border-2 flex justify-start border-black w-full px-2 py-4 rounded-xl transition duration-500 hover:shadow-lg hover:shadow-cyan-500">
+              * {element}
+            </div>
+          </li>
         ))}
       </ul>
     </div>
