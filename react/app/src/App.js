@@ -1,12 +1,13 @@
-import { useState } from "react";
-import { TodoForm } from "./components/TodoForm";
+import About from "./components/About";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div className="h-screen flex flex-col items-center justify-center bg-white">
-      <div className="flex flex-col items-center space-y-8">
-        <h1 className="text-6xl font-mono font-semibold">To-do List App</h1>
-        <TodoForm />
+    <div className="flex flex-col items-center text-white bg-blue-400 h-screen">
+      <Navbar />
+      <div id="content" className="flex flex-col items-center space-y-12 mt-10">
+        <h1 className="text-6xl">Hi! I'm <span className="text-8xl italic bg-blue-200 p-2 rounded-xl text-black">Mark Fang.</span></h1>
+        <About />
       </div>
     </div>
   );
