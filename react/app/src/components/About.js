@@ -19,7 +19,7 @@ const About = () => {
   ];
 
   return (
-    <div className="flex flex-col items-start space-y-6">
+    <div id="about" className="flex flex-col items-start space-y-6">
       <h1 className="text-6xl">About.</h1>
       <div className="flex flex-col container space-y-6">
         {sections.map((item) => {

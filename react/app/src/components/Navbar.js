@@ -3,7 +3,7 @@ import React from "react";
 const Navbar = () => {
   const pages = [
     { name: "Home", redirect: "" },
-    { name: "About", redirect: "" },
+    { name: "About", redirect: "about" },
   ];
 
   return (
@@ -13,8 +13,8 @@ const Navbar = () => {
         <ul className="flex items-center space-x-8">
           {pages.map((item) => {
             return (
-              <li className="duration-250 transition-all hover:shadow-xl hover:shadow-cyan-300 rounded-2xl text-md font-serif border-2 px-4 py-2">
-                <a href={item.redirect}>{item.name}</a>
+              <li  className="cursor-pointer duration-250 transition-all hover:shadow-xl hover:shadow-cyan-300 rounded-2xl text-md font-serif border-2 px-4 py-2">
+                <a onClick={() =>  document.getElementById(item.redirect).scrollIntoView()}>{item.name}</a>
               </li>
             );
           })}
