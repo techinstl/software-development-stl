@@ -12,6 +12,10 @@ const About = () => {
       content:
         "I enjoy basketball, programming, and writing. If you don't see me in the driveway shooting hoops, I'm working on my next big thing!",
     },
+    {
+      name: "About Me",
+      content: "My name is Mark Fang and I am 14 years old. Goodbye."
+    }
   ];
 
   return (
