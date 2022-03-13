@@ -6,6 +6,12 @@ import Testing from "./components/Testing";
 function App() {
   return (
     <div className="flex flex-col items-center text-white bg-blue-400 bg-light-900">
+      {[
+        { content: "Test", completed: true, loading: false }, 
+        { content: "Test2", completed: false },
+      ].map((element) => {
+        return <Testing loading={element.loading} completed={element.completed} title={element.title}>{element.content}</Testing>;
+      })}
       <Navbar />
       <div
         id="content"
