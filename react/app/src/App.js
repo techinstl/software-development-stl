@@ -6,9 +6,11 @@ import Testing from "./components/Testing";
 function App() {
   return (
     <div className="flex flex-col items-center text-white bg-blue-400 bg-light-900">
-      <Testing />
       <Navbar />
-      <div id="content" className="flex flex-col items-center space-y-24 mt-10 p-10">
+      <div
+        id="content"
+        className="flex flex-col items-center space-y-24 mt-10 p-10"
+      >
         <div className="flex flex-col items-center space-y-6">
           <h1 className="text-6xl">
             Hi! I'm{" "}

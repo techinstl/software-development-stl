@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-const Testing = () => {
-  const [counter, setCounter] = useState(0);
-
-  useEffect(() => {
-
-  }, []);
-
-  const handleClick = () => {
-    setCounter((currentValue) => currentValue + 1);
-  };
-
-  return <button onClick={handleClick}>{counter}</button>;
+const Testing = (props) => {
+  return (
+    <div className="flex flex-col space-y-6">
+      <h1 className="text-3xl">{props.title}</h1>
+      <p className="text-lg">{props.children}</p>
+    </div>
+  );
 };
 
 export default Testing;
