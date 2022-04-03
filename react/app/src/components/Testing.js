@@ -1,16 +1,21 @@
 import React, { useEffect, useState } from "react";
+import axios from 'axios'
 
 const Testing = (props) => {
 
-  if(props.loading){
-    return <h1>Loading...</h1>
-  }
+  const [quote, setQuote] = useState(null);
+
+  useEffect(() => {
+    axios.get("https://www.api.quotable.io/random").then(response => {
+      console.log(response.data);
+      setQuote(response.data);
+    })
+  }, []);
 
   return (
-    <div className="flex flex-col space-y-6 border-2 px-4 py-2">
-      <p className="text-lg">{props.children}</p>
-      {props.completed ? "Completed!" : "Not Completed!"}
-    </div>
+    <>
+      <h1>Quote:</h1>
+    </>
   );
 };
 
