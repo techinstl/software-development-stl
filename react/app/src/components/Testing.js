@@ -6,16 +6,17 @@ const Testing = (props) => {
   const [quote, setQuote] = useState(null);
 
   useEffect(() => {
-    axios.get("https://www.api.quotable.io/random").then(response => {
+    axios.get("https://api.quotable.io/random").then(response => {
       console.log(response.data);
       setQuote(response.data);
     })
   }, []);
 
   return (
-    <>
-      <h1>Quote:</h1>
-    </>
+    <div className="flex flex-col space-y-4 ">
+      <h1 className="text-xl">{quote.author}</h1>
+      <p className="text-md">{quote.content}</p>
+    </div>
   );
 };
 
